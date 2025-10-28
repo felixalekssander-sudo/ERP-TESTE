@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #proposal-pdf-content,
+  #proposal-pdf-content * {
+    visibility: visible;
+  }
+
+  #proposal-pdf-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+}
